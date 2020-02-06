@@ -1,5 +1,6 @@
 package labelBuilder;
 
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -41,7 +42,7 @@ public class EliphindSearch {
 
     public static void main(String[] args) throws IOException {
         // Multiple words must have '+' between them in the query
-        EliphindSearch eliphindSearch = new EliphindSearch(2, "iran+us+conflict");
+        EliphindSearch eliphindSearch = new EliphindSearch(15, "crimea+united+kingdom");
 
         List<PageRequest> pageRequestsList = new ArrayList<>(urls.length);
         for(String url : urls) {
@@ -81,20 +82,35 @@ public class EliphindSearch {
 
         @Override
         public void run() {
+            long time = System.currentTimeMillis();
             try {
                 synchronized (lock) {
-                    Document doc = Jsoup.connect(url)
-                            .get();
+                    Connection connect = Jsoup.connect(url);
+
+                    connect.timeout(120 * 1000);
+
+                    this.results = connect
+                            .userAgent("Mozilla/5.0")
+                            .timeout(400000)
+                            .get()
+                            .getElementsByClass("veridiansearchresultcell")
+                            .select("div")
+                            .select("a")
+                            .select("span");
+
+                    System.out.println("Done crawling " + url + ", took " + (System.currentTimeMillis() - time) + " millis");
+                    System.out.println("Content: " + this.results);
 
                     // Page specific parsing
-                    Elements content = doc.getElementsByClass("veridiansearchresultcell");
+//                    Elements content = doc.getElementsByClass("veridiansearchresultcell");
 
-                    this.results = content.select("div").select("a").select("span");
+//                    this.results = content.select("div").select("a").select("span");
                     lock.notifyAll();
                 }
 
             } catch(IOException e) {
-                System.out.println(e);
+                System.out.println("Failed after " + (System.currentTimeMillis() - time) + " millis");
+//                System.out.println(e);
             }
         }
 
