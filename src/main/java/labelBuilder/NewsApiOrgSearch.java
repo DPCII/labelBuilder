@@ -2,7 +2,6 @@ package labelBuilder;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -13,13 +12,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EliphindSearch {
+public class NewsApiOrgSearch {
     private static String[] urls;
 
-
+//    https://newsapi.org/v2/everything?q={query}&apiKey={apikey}
 
     // construct search query, number of pages, list of urls as a result of those variables, and execute
-    public EliphindSearch(int pages, String query) {
+    public NewsApiOrgSearch(int pages, String query) {
         urls = new String[pages];
         urls = buildUrls(pages, query);
     }
@@ -41,7 +40,7 @@ public class EliphindSearch {
 
     public static void main(String[] args) throws IOException {
         // Multiple words must have '+' between them in the query
-        EliphindSearch eliphindSearch = new EliphindSearch(5, "iran+united+states");
+        NewsApiOrgSearch eliphindSearch = new NewsApiOrgSearch(5, "iran+united+states");
 
         List<PageRequest> pageRequestsList = new ArrayList<>(urls.length);
         for(String url : urls) {
