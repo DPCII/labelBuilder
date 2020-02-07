@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d20ced9-5821-4b1e-9417-a3189162ce8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/labelBuilder/GoogleSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/GoogleSearch$PageRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/GoogleSearch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/NewsApiOrgSearch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,10 +16,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/EliphindSearch$PageRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/EliphindSearch$PageRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/EliphindSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/EliphindSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/labelBuilder/EliphindSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labelBuilder/EliphindSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/labelBuilder/GoogleLabelBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/GoogleLabelBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labelBuilder/NewsApiOrgSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labelBuilder/NewsApiOrgSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -79,7 +84,7 @@
       <command value="gradle buildEnvironment" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.EliphindSearch">
+  <component name="RunManager" selected="Application.NewsApiOrgSearch">
     <configuration name="EliphindSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="labelBuilder.EliphindSearch" />
       <module name="doc2vec_label_builder.main" />
@@ -88,6 +93,32 @@
           <option name="PATTERN" value="labelBuilder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewsApiOrgSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="NEWSAPIORG_KEY" value="4ca88b37bc9c4503b84708791c818a69" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="labelBuilder.NewsApiOrgSearch" />
+      <module name="doc2vec_label_builder.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="labelBuilder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,44 +136,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="doc2vec_label_builder [buildNeeded]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="buildNeeded" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="doc2vec_label_builder [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="wrapper" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="doc2vec_label_builder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -208,13 +201,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.EliphindSearch" />
+      <item itemvalue="Application.labelBuilder" />
+      <item itemvalue="Application.NewsApiOrgSearch" />
+      <item itemvalue="Gradle.doc2vec_label_builder" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NewsApiOrgSearch" />
         <item itemvalue="Application.EliphindSearch" />
         <item itemvalue="Application.labelBuilder" />
         <item itemvalue="Gradle.doc2vec_label_builder" />
-        <item itemvalue="Gradle.doc2vec_label_builder [wrapper]" />
-        <item itemvalue="Gradle.doc2vec_label_builder [buildNeeded]" />
       </list>
     </recent_temporary>
   </component>
@@ -232,10 +230,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="533" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1581022624595">
+    <state x="186" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581115491324">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state x="533" y="149" key="#com.intellij.ide.util.MemberChooser/0.23.1440.837@0.23.1440.837" timestamp="1581022624595" />
+    <state x="186" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.837@0.23.1440.837" timestamp="1581115491324" />
+    <state x="533" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1581118596002">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="533" y="149" key="#com.intellij.ide.util.MemberChooser/0.23.1440.837@0.23.1440.837" timestamp="1581118596002" />
     <state x="177" y="364" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1580870303037">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
@@ -244,22 +246,26 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state x="445" y="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.837@0.23.1440.837" timestamp="1580870317059" />
-    <state width="1363" height="197" key="GridCell.Tab.0.bottom" timestamp="1581091440332">
+    <state x="478" y="202" key="EnvironmentVariablesDialog" timestamp="1581115240362">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1363" height="197" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1581091440332" />
-    <state width="1363" height="197" key="GridCell.Tab.0.center" timestamp="1581091440331">
+    <state x="478" y="202" key="EnvironmentVariablesDialog/0.23.1440.837@0.23.1440.837" timestamp="1581115240362" />
+    <state width="1363" height="137" key="GridCell.Tab.0.bottom" timestamp="1581118943541">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1363" height="197" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1581091440331" />
-    <state width="1363" height="197" key="GridCell.Tab.0.left" timestamp="1581091440331">
+    <state width="1363" height="137" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1581118943541" />
+    <state width="1363" height="137" key="GridCell.Tab.0.center" timestamp="1581118943540">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1363" height="197" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1581091440331" />
-    <state width="1363" height="197" key="GridCell.Tab.0.right" timestamp="1581091440332">
+    <state width="1363" height="137" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1581118943540" />
+    <state width="1363" height="137" key="GridCell.Tab.0.left" timestamp="1581118943540">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1363" height="197" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1581091440332" />
+    <state width="1363" height="137" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1581118943540" />
+    <state width="1363" height="137" key="GridCell.Tab.0.right" timestamp="1581118943541">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1363" height="137" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1581118943541" />
     <state width="1363" height="256" key="GridCell.Tab.1.bottom" timestamp="1581037290073">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
@@ -276,10 +282,14 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state width="1363" height="256" key="GridCell.Tab.1.right/0.23.1440.837@0.23.1440.837" timestamp="1581037290073" />
-    <state x="402" y="262" key="com.intellij.ide.util.TipDialog" timestamp="1581089697624">
+    <state x="211" y="23" key="SettingsEditor" timestamp="1581113485924">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state x="402" y="262" key="com.intellij.ide.util.TipDialog/0.23.1440.837@0.23.1440.837" timestamp="1581089697624" />
+    <state x="211" y="23" key="SettingsEditor/0.23.1440.837@0.23.1440.837" timestamp="1581113485924" />
+    <state x="402" y="262" key="com.intellij.ide.util.TipDialog" timestamp="1581113498733">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="402" y="262" key="com.intellij.ide.util.TipDialog/0.23.1440.837@0.23.1440.837" timestamp="1581113498733" />
     <state x="385" y="201" width="670" height="675" key="run.anything.popup" timestamp="1580870507311">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
