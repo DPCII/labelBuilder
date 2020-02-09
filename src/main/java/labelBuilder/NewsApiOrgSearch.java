@@ -40,12 +40,21 @@ public class NewsApiOrgSearch {
 
         NewsApiOrgSearch newsApiOrgSearch = new NewsApiOrgSearch(1, "iran");
 
-        String json1 = newsApiOrgSearch.getJsonResponse();
+        String jsonString = newsApiOrgSearch.getJsonResponse();
 
-        ObjectMapper mapper = new ObjectMapper();
-        Map<String, Object> stories = mapper.readValue(json1, Map.class);
+//        ObjectMapper mapper = new ObjectMapper();
+//        Map<String, Object> stories = mapper.readValue(jsonString, Map.class);
 
-        System.out.println(stories);
+//        System.out.println(stories);
+        String parentPath = "/Users/imac/IdeaProjects/labelBuilder/src/main/java/labelBuilder/";
+
+        File jsonFile = new File(parentPath + "jsonTest.json");
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(jsonFile));
+
+        bufferedWriter.write(jsonString);
+
+        bufferedWriter.flush();
+        bufferedWriter.close();
 
 
     }
