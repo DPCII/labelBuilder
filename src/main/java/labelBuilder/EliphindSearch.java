@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class EliphindSearch {
@@ -41,7 +42,7 @@ public class EliphindSearch {
 
     public static void main(String[] args) throws IOException {
         // Multiple words must have '+' between them in the query
-        EliphindSearch eliphindSearch = new EliphindSearch(5, "iran+united+states");
+        EliphindSearch eliphindSearch = new EliphindSearch(2, "iran+united+states");
 
         List<PageRequest> pageRequestsList = new ArrayList<>(urls.length);
         for(String url : urls) {
@@ -129,7 +130,7 @@ public class EliphindSearch {
 
 
     public void printHeadlinesToFile(String headline) throws IOException {
-        String labeledDataPath = "/Users/imac/IdeaProjects/documentClassifier/src/main/java/data/paravec/labeled/iran_us_conflict/";
+        String labeledDataPath = "/Users/imac/IdeaProjects/documentClassifier/src/main/java/data/paravec/labeled/test/";
         int num = 1;
 
         File f = new File(labeledDataPath + num + ".txt");
@@ -141,7 +142,6 @@ public class EliphindSearch {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f.getAbsolutePath()));
 
         bufferedWriter.write(headline);
-        bufferedWriter.flush();
         bufferedWriter.close();
     }
 

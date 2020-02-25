@@ -53,7 +53,6 @@ public class NewsApiOrgSearch {
 
         bufferedWriter.write(jsonString);
 
-        bufferedWriter.flush();
         bufferedWriter.close();
 
 

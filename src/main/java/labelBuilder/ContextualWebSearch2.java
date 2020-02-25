@@ -12,7 +12,11 @@ import org.jsoup.Jsoup;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+// Appear to have an error where only the last of requested pages is being requested, resulting in lots of duplicates of those responses
+// Should build a test method or unit test to map results after completion and make sure there aren't duplicates
 
 public class ContextualWebSearch2 {
     private static String[] urls;
@@ -30,8 +34,9 @@ public class ContextualWebSearch2 {
             return new String[]{"https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/NewsSearchAPI?autoCorrect=false&pageNumber=" + pages + "&pageSize=50&q="+ query +"&safeSearch=false"};
         else {
             String[] temp = new String[pages];
-            for(int i = 0; i< pages; i++) {
-                temp[i] = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/NewsSearchAPI?autoCorrect=false&pageNumber=" + pages + "&pageSize=50&q="+ query +"&safeSearch=false";
+            temp[0] = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/NewsSearchAPI?autoCorrect=false&pageNumber=1&pageSize=50&q="+ query +"&safeSearch=false";
+            for(int i = 1; i < pages; i++) {
+                temp[i] = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/NewsSearchAPI?autoCorrect=false&pageNumber=" + (i + 1) + "&pageSize=50&q="+ query +"&safeSearch=false";
             }
             return temp;
         }
@@ -40,7 +45,7 @@ public class ContextualWebSearch2 {
 
     public static void main(String[] args) throws IOException {
         // Multiple words must have '+' between them in the query
-        ContextualWebSearch2 contextualWebSearch2 = new ContextualWebSearch2(1, "iran+united+states");
+        ContextualWebSearch2 contextualWebSearch2 = new ContextualWebSearch2(5, "judicial+executive+legislative");
 
         List<PageRequest> pageRequestsList = new ArrayList<>(urls.length);
         for(String url : urls) {
@@ -100,8 +105,9 @@ public class ContextualWebSearch2 {
                     String temp = "";
 
                     // This process digs into the JSON response and pulls out only the titles from 50 responses
+                    // Two regex cleaning steps
                     for(int i = 0; i<valueNode.size(); i++) {
-                        temp = valueNode.get(i).findPath("title").toString().replace("\"", "");
+                        temp = valueNode.get(i).findPath("title").toString().replaceAll("[\"\\\\]", "").replace("-", " ");
                         titleList.add(Jsoup.parse(temp).text());
                     }
 
@@ -133,7 +139,7 @@ public class ContextualWebSearch2 {
 
 
     public void printHeadlinesToFile(String headline) throws IOException {
-        String labeledDataPath = "/Users/imac/IdeaProjects/documentClassifier/src/main/java/data/paravec/labeled/testFolder/";
+        String labeledDataPath = "/Users/imac/IdeaProjects/documentClassifier/src/main/java/data/paravec/labeled/politics/";
         int num = 1;
 
         File f = new File(labeledDataPath + num + ".txt");
@@ -145,7 +151,6 @@ public class ContextualWebSearch2 {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f.getAbsolutePath()));
 
         bufferedWriter.write(headline);
-        bufferedWriter.flush();
         bufferedWriter.close();
     }
 

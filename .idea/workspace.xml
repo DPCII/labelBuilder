@@ -10,9 +10,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/NewsApiOrgSearch$PageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/NewsApiOrgSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/NewsApiOrgSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/ContextualWebSearch2$PageRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/ContextualWebSearch2$PageRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/ContextualWebSearch2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/labelBuilder/ContextualWebSearch2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labelBuilder/ContextualWebSearch2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labelBuilder/ContextualWebSearch2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labelBuilder/EliphindSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labelBuilder/EliphindSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/labelBuilder/NewsApiOrgSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labelBuilder/NewsApiOrgSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labelBuilder/jsonTest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/labelBuilder/labelBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/labelBuilder/labelBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,38 +280,38 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state x="478" y="202" key="EnvironmentVariablesDialog/0.23.1440.837@0.23.1440.837" timestamp="1581272550888" />
-    <state width="1371" height="142" key="GridCell.Tab.0.bottom" timestamp="1581278793073">
+    <state width="1371" height="142" key="GridCell.Tab.0.bottom" timestamp="1581427204593">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1371" height="142" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1581278793073" />
-    <state width="1371" height="142" key="GridCell.Tab.0.center" timestamp="1581278793072">
+    <state width="1371" height="142" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1581427204593" />
+    <state width="1371" height="142" key="GridCell.Tab.0.center" timestamp="1581427204593">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1371" height="142" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1581278793072" />
-    <state width="1371" height="142" key="GridCell.Tab.0.left" timestamp="1581278793071">
+    <state width="1371" height="142" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1581427204593" />
+    <state width="1371" height="142" key="GridCell.Tab.0.left" timestamp="1581427204592">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1371" height="142" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1581278793071" />
-    <state width="1371" height="142" key="GridCell.Tab.0.right" timestamp="1581278793072">
+    <state width="1371" height="142" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1581427204592" />
+    <state width="1371" height="142" key="GridCell.Tab.0.right" timestamp="1581427204593">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1371" height="142" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1581278793072" />
-    <state width="1371" height="265" key="GridCell.Tab.1.bottom" timestamp="1581273925032">
+    <state width="1371" height="142" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1581427204593" />
+    <state width="1371" height="265" key="GridCell.Tab.1.bottom" timestamp="1581293070203">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1371" height="265" key="GridCell.Tab.1.bottom/0.23.1440.837@0.23.1440.837" timestamp="1581273925032" />
-    <state width="1371" height="265" key="GridCell.Tab.1.center" timestamp="1581273925031">
+    <state width="1371" height="265" key="GridCell.Tab.1.bottom/0.23.1440.837@0.23.1440.837" timestamp="1581293070203" />
+    <state width="1371" height="265" key="GridCell.Tab.1.center" timestamp="1581293070203">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1371" height="265" key="GridCell.Tab.1.center/0.23.1440.837@0.23.1440.837" timestamp="1581273925031" />
-    <state width="1371" height="265" key="GridCell.Tab.1.left" timestamp="1581273925031">
+    <state width="1371" height="265" key="GridCell.Tab.1.center/0.23.1440.837@0.23.1440.837" timestamp="1581293070203" />
+    <state width="1371" height="265" key="GridCell.Tab.1.left" timestamp="1581293070202">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1371" height="265" key="GridCell.Tab.1.left/0.23.1440.837@0.23.1440.837" timestamp="1581273925031" />
-    <state width="1371" height="265" key="GridCell.Tab.1.right" timestamp="1581273925032">
+    <state width="1371" height="265" key="GridCell.Tab.1.left/0.23.1440.837@0.23.1440.837" timestamp="1581293070202" />
+    <state width="1371" height="265" key="GridCell.Tab.1.right" timestamp="1581293070203">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state width="1371" height="265" key="GridCell.Tab.1.right/0.23.1440.837@0.23.1440.837" timestamp="1581273925032" />
+    <state width="1371" height="265" key="GridCell.Tab.1.right/0.23.1440.837@0.23.1440.837" timestamp="1581293070203" />
     <state x="211" y="23" key="SettingsEditor" timestamp="1581262480853">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
@@ -316,10 +320,10 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state width="706" height="413" key="XDebugger.FullValuePopup/0.23.1440.837@0.23.1440.837" timestamp="1581273916814" />
-    <state x="402" y="262" key="com.intellij.ide.util.TipDialog" timestamp="1581272475343">
+    <state x="402" y="262" key="com.intellij.ide.util.TipDialog" timestamp="1581397156905">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state x="402" y="262" key="com.intellij.ide.util.TipDialog/0.23.1440.837@0.23.1440.837" timestamp="1581272475343" />
+    <state x="402" y="262" key="com.intellij.ide.util.TipDialog/0.23.1440.837@0.23.1440.837" timestamp="1581397156905" />
     <state x="385" y="201" width="670" height="675" key="run.anything.popup" timestamp="1580870507311">
       <screen x="0" y="23" width="1440" height="837" />
     </state>

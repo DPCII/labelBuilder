@@ -41,7 +41,6 @@ public class labelBuilder {
 //            bufferedWriter.newLine();
 //            System.out.println(temp.get(i));
 //        }
-//        bufferedWriter.flush();
 //        bufferedWriter.close();
 
     } // ends main
